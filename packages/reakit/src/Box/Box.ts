@@ -23,6 +23,7 @@ export type BoxHTMLProps = React.HTMLAttributes<any> &
 
 export type BoxProps = BoxOptions & BoxHTMLProps;
 
+/** @deprecated useBox is replaced by useRole */
 export const useBox = createHook<BoxOptions, BoxHTMLProps>({
   name: "Box",
   keys: BOX_KEYS,
@@ -36,6 +37,7 @@ export const useBox = createHook<BoxOptions, BoxHTMLProps>({
   },
 });
 
+/** @deprecated Box is replaced by Role */
 export const Box = createComponent({
   as: "div",
   useHook: useBox,

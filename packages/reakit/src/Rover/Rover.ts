@@ -53,6 +53,7 @@ function useAllCallbacks(
   }, callbacks);
 }
 
+/** @deprecated useRover has been replaced by useComposite */
 export const useRover = createHook<RoverOptions, RoverHTMLProps>({
   name: "Rover",
   compose: [useClickable, unstable_useId],
@@ -148,6 +149,7 @@ export const useRover = createHook<RoverOptions, RoverHTMLProps>({
   },
 });
 
+/** @deprecated Rover has been replaced by CompositeItem */
 export const Rover = createComponent({
   as: "button",
   useHook: useRover,
